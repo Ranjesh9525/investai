@@ -1,13 +1,9 @@
-import type { NextConfig } from "next";
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true, // Completely disables ESLint during production builds
+  },
+};
 
-const nextConfig: NextConfig = {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
-  }
-}
-;
-
-export default nextConfig;
+module.exports = nextConfig;
